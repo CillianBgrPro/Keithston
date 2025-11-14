@@ -1,0 +1,1015 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.nav {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 35px;
+    height: 40px;
+}
+
+.menu-burger {
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-burger i {
+    font-size: 26px;
+    color: #000000;
+}
+
+.MenuBurger {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: -250px;
+    background-color: white;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.MenuBurger.active {
+    left: 0;
+}
+
+.MenuBurger ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.MenuBurger a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.MenuBurger a:hover {
+    color: #E9BD8C;
+}
+
+/* Header Background */
+.background-image {
+    height: 254px;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.txt-1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #E9BD8C;
+    padding-top: 80px;
+    padding-left: 21px;
+}
+
+.txt-2 {
+    font-family: "Sansita Swashed", system-ui;
+    font-weight: 400;
+    color: #ffffff;
+    padding-left: 21px;
+    font-size: 26px;
+}
+
+.commander {
+    width: 114px;
+    height: 30px;
+    background-color: #933C24;
+    border-radius: 10px;
+    margin-left: 21px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.commander:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(147, 60, 36, 0.5);
+}
+
+.txt-3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.txt-4 {
+    font-family: "Sansita Swashed", system-ui;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Section Produits */
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    align-items: center;
+    width: 100%;
+}
+
+.patisserie_feuillete,
+.pain_complet,
+.pain,
+.pain_blanc,
+.pate_feuillete,
+.miche_pain_complet {
+    width: 90%;
+    max-width: 360px;
+    height: 300px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.patisserie_feuillete:hover,
+.pain_complet:hover,
+.pain:hover,
+.pain_blanc:hover,
+.pate_feuillete:hover,
+.miche_pain_complet:hover {
+    transform: scale(1.05);
+}
+
+.patisserie_feuillete {
+    background-image: url("images/patisserie_feuillete.png");
+}
+
+.pain_complet {
+    background-image: url("images/pain_complet.png");
+}
+
+.pain {
+    background-image: url("images/pain.png");
+}
+
+.pain_blanc {
+    background-image: url("images/pain_blanc.png");
+}
+
+.pate_feuillete {
+    background-image: url("images/pate_feuilleté.png");
+}
+
+.miche_pain_complet {
+    background-image: url("images/miche_pain_complet.png");
+}
+
+.info {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 188px;
+    right: 33px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.info:hover {
+    transform: scale(1.2);
+}
+
+.prix {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 188px;
+    left: 33px;
+}
+
+.nom_produit {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 243px;
+    left: 33px;
+}
+
+.ajouter {
+    width: 80px;
+    height: 44px;
+    background-color: #933C24;
+    position: absolute;
+    top: 234px;
+    right: 33px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.ajouter:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(147, 60, 36, 0.5);
+}
+
+.txt-ajouter {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Background 2 - Réduction */
+.background2 {
+    width: 100%;
+    height: 379px;
+    margin-top: 30px;
+    background-image: url("images/background2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.reduction {
+    font-family: "Sansita Swashed", system-ui;
+    font-weight: 500;
+    font-size: 24px;
+    color: #933C24;
+    margin-bottom: 20px;
+}
+
+.txt_offre {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #5D5D5D;
+    margin-bottom: 30px;
+}
+
+.en_savoir_plus {
+    width: 177px;
+    height: 58px;
+    border-radius: 10px;
+    background-color: #933C24;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.en_savoir_plus:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(147, 60, 36, 0.5);
+}
+
+.en_savoir_plus_txt {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Découvrir */
+.decouvrir_txt {
+    font-family: "Sansita Swashed", system-ui;
+    font-weight: 600;
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.gateaux {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    border-bottom: 1px solid #D9D9D9;
+    margin: 0 auto;
+    width: 95%;
+    padding-bottom: 5px;
+    overflow-x: auto;
+}
+
+.gateaux p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #5D5D5D;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+}
+
+.gateaux p.underline::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #A54A2A;
+    border-radius: 2px;
+}
+
+/* Discover Section */
+.discover {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 30px;
+    align-items: center;
+}
+
+.photo1,
+.photo2,
+.photo3,
+.photo4,
+.photo5,
+.photo6 {
+    width: 90%;
+    max-width: 298px;
+    height: 290px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.photo1:hover,
+.photo2:hover,
+.photo3:hover,
+.photo4:hover,
+.photo5:hover,
+.photo6:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.photo1 {
+    background-image: url("images/photo1.png");
+}
+
+.photo2 {
+    background-image: url("images/photo2.png");
+}
+
+.photo3 {
+    background-image: url("images/photo3.png");
+}
+
+.photo4 {
+    background-image: url("images/photo4.png");
+}
+
+.photo5 {
+    background-image: url("images/photo5.png");
+}
+
+.photo6 {
+    background-image: url("images/photo6.png");
+}
+
+/* Background 3 - A propos */
+.background3 {
+    height: 380px;
+    width: 100%;
+    background-image: url(images/background3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.propos {
+    font-family: "Sansita Swashed", system-ui;
+    font-weight: 600;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.propos_txt {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #B9B9B9;
+    margin-bottom: 30px;
+    max-width: 279px;
+}
+
+.lire_plus {
+    width: 136px;
+    height: 58px;
+    background-color: #933C24;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.lire_plus:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(147, 60, 36, 0.5);
+}
+
+.lire_plus_txt {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Petits Plaisirs */
+.petit_plaisir {
+    font-family: "Sansita Swashed", system-ui;
+    font-weight: 600;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.plaisir_section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+}
+
+.plaisir1,
+.plaisir2,
+.plaisir3 {
+    width: 90%;
+    max-width: 300px;
+    height: 297px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.plaisir1:hover,
+.plaisir2:hover,
+.plaisir3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.plaisir1 {
+    background-image: url("images/plaisir1.png");
+}
+
+.plaisir2 {
+    background-image: url("images/plaisir2.png");
+}
+
+.plaisir3 {
+    background-image: url("images/plaisir3.png");
+}
+
+.nom_plaisir {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.prix_plaisir {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 1900px;
+    right: 20px;
+}
+
+/* Footer */
+.background_footer {
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+    background-image: url(images/background_footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo_footer {
+    width: 114px;
+    height: 117px;
+    margin: 10px auto;
+    display: block;
+}
+
+.suivez_nous {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #E9BD8C;
+    margin: 20px 0;
+}
+
+.nos_reseaux {
+    width: 258px;
+    height: 37px;
+    margin: 10px auto;
+    display: block;
+}
+
+.barre_footer {
+    width: 100%;
+    height: 1px;
+    background-color: #6e6e6e8b;
+    margin: 30px 0;
+}
+
+.a_propos_footer {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #E9BD8C;
+    margin: 20px 0;
+}
+
+.tel,
+.mail,
+.location {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.tel:hover,
+.mail:hover,
+.location:hover {
+    text-decoration: underline;
+    color: #E9BD8C;
+}
+
+.explorer {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #E9BD8C;
+    margin: 30px 0 20px 0;
+}
+
+.accueil_txt,
+.Blog_txt,
+.contact_txt,
+.services_txt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.accueil_txt:hover,
+.Blog_txt:hover,
+.contact_txt:hover,
+.services_txt:hover {
+    color: #E9BD8C;
+}
+
+.actualite {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #E9BD8C;
+    margin: 30px 0 20px 0;
+}
+
+.actu1,
+.actu2 {
+    width: 100px;
+    height: 67px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.date1,
+.date2 {
+    font-family: "Poppins", sans-serif;
+    color: #E9BD8C;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.news1,
+.news2 {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 5px 0 20px 0;
+}
+
+.copy {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #737373;
+    margin: 30px 0;
+}
+
+/* Bouton retour haut */
+.btn-up {
+    height: 45px;
+    width: 45px;
+    background: #9a5327;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #ffffff8e;
+    border: 0.5px solid #ffffff59;
+    color: #fff;
+    z-index: 999;
+}
+
+.btn-up:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Tablet */
+@media screen and (min-width: 768px) {
+    .nav {
+        height: 80px;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        padding: 20px 60px;
+    }
+
+    .logo {
+        width: 60px;
+        height: auto;
+    }
+
+    .menu-burger {
+        display: none;
+    }
+
+    .MenuBurger {
+        position: static;
+        width: auto;
+        height: auto;
+        left: 0;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+        display: flex !important;
+        margin-left: auto;
+    }
+
+    .MenuBurger ul {
+        display: flex;
+        gap: 30px;
+    }
+
+    .MenuBurger a {
+        font-size: 22px;
+        padding: 0;
+        color: #FFFFFF;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+    }
+
+    .MenuBurger ul li:first-child a {
+        color: #E9BD8C;
+    }
+
+    .background-image {
+        height: 500px;
+    }
+
+    .txt-1 {
+        font-size: 20px;
+        padding-top: 150px;
+        padding-left: 60px;
+    }
+
+    .txt-2 {
+        font-size: 45px;
+        padding-left: 60px;
+    }
+
+    .commander {
+        width: 180px;
+        height: 50px;
+        margin-left: 60px;
+    }
+
+    .txt-3 {
+        font-size: 20px;
+    }
+
+    .txt-4 {
+        font-size: 50px;
+        margin-top: 40px;
+    }
+
+    .section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .patisserie_feuillete,
+    .pain_complet,
+    .pain,
+    .pain_blanc,
+    .pate_feuillete,
+    .miche_pain_complet {
+        width: 100%;
+        height: 350px;
+    }
+
+    .background2 {
+        height: 450px;
+    }
+
+    .reduction {
+        font-size: 32px;
+    }
+
+    .txt_offre {
+        font-size: 20px;
+    }
+
+    .decouvrir_txt {
+        font-size: 50px;
+    }
+
+    .gateaux p {
+        font-size: 20px;
+    }
+
+    .discover {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .photo1,
+    .photo2,
+    .photo3,
+    .photo4,
+    .photo5,
+    .photo6 {
+        width: 100%;
+        height: 350px;
+    }
+
+    .background3 {
+        height: 450px;
+    }
+
+    .propos {
+        font-size: 40px;
+    }
+
+    .propos_txt {
+        font-size: 20px;
+        max-width: 400px;
+    }
+
+    .petit_plaisir {
+        font-size: 50px;
+    }
+
+    .plaisir_section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .plaisir1,
+    .plaisir2,
+    .plaisir3 {
+        width: 100%;
+    }
+}
+
+/* Responsive Desktop */
+@media screen and (min-width: 1200px) {
+    .logo {
+        width: 87px;
+        height: 99px;
+    }
+
+    .background-image {
+        height: 813px;
+    }
+
+    .txt-1 {
+        font-size: 30px;
+        padding-top: 250px;
+        padding-left: 80px;
+    }
+
+    .txt-2 {
+        font-size: 74px;
+        padding-left: 80px;
+    }
+
+    .commander {
+        width: 219px;
+        height: 65px;
+        margin-left: 80px;
+    }
+
+    .txt-3 {
+        font-size: 24px;
+    }
+
+    .txt-4 {
+        font-size: 64px;
+    }
+
+    .section {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        gap: 30px;
+    }
+
+    .patisserie_feuillete,
+    .pain_complet,
+    .pain,
+    .pain_blanc,
+    .pate_feuillete,
+    .miche_pain_complet {
+        height: 411px;
+    }
+
+    .background2 {
+        height: 550px;
+    }
+
+    .reduction {
+        font-size: 36px;
+    }
+
+    .txt_offre {
+        font-size: 24px;
+    }
+
+    .en_savoir_plus {
+        width: 231px;
+        height: 63px;
+    }
+
+    .en_savoir_plus_txt {
+        font-size: 24px;
+    }
+
+    .decouvrir_txt {
+        font-size: 64px;
+    }
+
+    .gateaux p {
+        font-size: 24px;
+    }
+
+    .discover {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+    }
+
+    .photo1,
+    .photo2,
+    .photo3,
+    .photo4,
+    .photo5,
+    .photo6 {
+        height: 400px;
+    }
+
+    .background3 {
+        height: 600px;
+    }
+
+    .propos {
+        font-size: 48px;
+    }
+
+    .propos_txt {
+        font-size: 24px;
+        max-width: 500px;
+    }
+
+    .lire_plus {
+        width: 169px;
+        height: 63px;
+    }
+
+    .lire_plus_txt {
+        font-size: 24px;
+    }
+
+    .petit_plaisir {
+        font-size: 64px;
+    }
+
+    .plaisir_section {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+    }
+
+    .plaisir1,
+    .plaisir2,
+    .plaisir3 {
+        height: 410px;
+    }
+
+    .nom_plaisir,
+    .prix_plaisir {
+        font-size: 24px;
+    }
+}
